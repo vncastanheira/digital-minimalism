@@ -1,0 +1,27 @@
+{
+
+    "manifest_version": 2,
+    "name": "Digital Minimalism",
+    "description": "Healthy use of the web.",
+    "version": "1.0",
+    "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+    "icons": {
+        "48": "assets/chain.png"
+    },
+    "browser_action": {
+        "default_icon": "assets/chain.png",
+        "theme_icons": [{
+            "light": "assets/chain.png",
+            "dark": "assets/chain.png",
+            "size": 64
+        }],
+        "default_title": "Beastify",
+        "default_popup": "index.html"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+    }],
+
+    "permissions": ["activeTab"]
+}
